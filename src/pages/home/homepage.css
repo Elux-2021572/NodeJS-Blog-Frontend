@@ -1,0 +1,115 @@
+:root {
+  --primary: #007BFF; 
+  --secondary: #FF5C5C; 
+  --background: #f8f9fa; 
+  --text: #333;
+  --light: #ffffff;
+  --hover-bg: #e3f2fd;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background);
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 1rem;
+  text-align: center;
+}
+
+.main-title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.navbar {
+  margin-top: 0.5rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0;
+}
+
+.navbar li a {
+  color: var(--light);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: var(--secondary);
+}
+
+.content {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.left-content {
+  flex: 2;
+  min-width: 300px;
+}
+
+.right-content {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.publications {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.publication {
+  background-color: var(--light);
+  padding: 1rem;
+  border-left: 5px solid var(--primary);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.course-card {
+  background-color: var(--light);
+  padding: 1rem;
+  border: 2px solid var(--primary);
+  border-left: 8px solid var(--secondary);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.course-card:hover {
+  transform: translateY(-3px);
+  background-color: var(--hover-bg);
+}
+
+.course-card h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.course-card p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  color: var(--text);
+}

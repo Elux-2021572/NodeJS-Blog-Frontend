@@ -1,0 +1,57 @@
+.nav-container {
+  width: 100%;
+  background-color: #007BFF; /* azul celeste fuerte */
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky; /* o usa fixed si lo quieres siempre visible */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Título del blog en el navbar */
+.nav-title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Botonera */
+.nav-buttons-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-button {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+  background-color: #FF5C5C; /* rojo suave */
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-buttons-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
