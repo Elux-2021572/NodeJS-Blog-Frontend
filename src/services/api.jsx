@@ -28,6 +28,17 @@ export const getPostByCourse = async (course) => {
     }
 }
 
+export const getPostById = async (id) => {
+    try {
+        return await apiClient.get(`/posts/${id}`);
+    } catch (e) {
+        return {
+            error: true,
+            e
+        }
+    }
+}
+
 export const addcomment = async (id, comment) => {
     try {
         return await apiClient.put(`/comments/${id}/addcomment`, comment);
